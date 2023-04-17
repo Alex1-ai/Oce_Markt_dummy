@@ -230,7 +230,8 @@ EMAIL_SERVER = 'smtp.gmail.com'
 
 
 # ADMIN EMAIL
-ADMIN_EMAIL = "alexanderemmanuel1719@gmail.com"
+ADMIN_EMAIL = "okolo.oce@gmail.com"
+# ADMIN_EMAIL = "alexanderemmanuel1719@gmail.com"
 
 # DELIVERY FEE
 STANDARD_DELIVERY = 5
