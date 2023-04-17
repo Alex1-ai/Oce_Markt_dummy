@@ -12,6 +12,8 @@ python-decouple = "*"
 django-session-timeout = "*"
 django-jazzmin = "*"
 decouple = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
