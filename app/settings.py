@@ -221,17 +221,19 @@ MESSAGE_TAGS = {
 # email stuff
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_PASSWORD = "lgbxkvhfxdrcseyu"
-DEFAULT_FROM_EMAIL = "alexisdelivery@gmail.com"
-EMAIL_HOST_USER = "tteachergradingsystem@gmail.com"
+
+EMAIL_HOST_USER = "ocemarkt@gmail.com"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_ACTIVE_FIELD = "is_active"
 EMAIL_SERVER = 'smtp.gmail.com'
-
-
+EMAIL_HOST_PASSWORD = "daoikamkxewdykrz"
+DEFAULT_FROM_EMAIL = "ocemarkt@gmail.com"
 # ADMIN EMAIL
 ADMIN_EMAIL = "okolo.oce@gmail.com"
 # ADMIN_EMAIL = "alexanderemmanuel1719@gmail.com"
 
 # DELIVERY FEE
 STANDARD_DELIVERY = 5
+# daoikamkxewdykrz
+# EMAIL_HOST_PASSWORD = "lgbxkvhfxdrcseyu"
+# DEFAULT_FROM_EMAIL = "alexisdelivery@gmail.com"
