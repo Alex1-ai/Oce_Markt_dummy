@@ -67,7 +67,7 @@ def register(request):
                 return redirect('/accounts/login/?command=verification&email='+email)
             except:
                 messages.error(
-                    request, "Please check your internet connectiona and try again!")
+                    request, "Please check your Email or internet connectiona and try again!")
             # messages.success(
             #     request, "Thank you for registering. We have sent you an verification email to your email address. please verify it")
 
