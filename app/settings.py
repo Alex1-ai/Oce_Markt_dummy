@@ -29,7 +29,7 @@ SECRET_KEY= os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ["oce-markt-env.eba-cx8z9cze.us-west-2.elasticbeanstalk.com"]
+ALLOWED_HOSTS = ["oce-markt-ecom-env.eba-x5u8at7f.us-west-2.elasticbeanstalk.com"]
 
 
 # Application definition
