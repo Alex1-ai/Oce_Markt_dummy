@@ -11,23 +11,25 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+
 import os
+from dotenv import load_dotenv
 #from decouple import config
 from django.contrib.messages import constants as messages
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-fogb=2$#h(zm#fv*a&rih!gx-e2)twfxm1w6%4txx40@!^*$nx"
-
+# SECRET_KEY = "django-insecure-fogb=2$#h(zm#fv*a&rih!gx-e2)twfxm1w6%4txx40@!^*$nx"
+SECRET_KEY= os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["oce-markt-env.eba-cx8z9cze.us-west-2.elasticbeanstalk.com"]
 
 
 # Application definition
@@ -41,13 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     'home',
     'category',
     'accounts',
     'store',
     'carts',
     'orders',
-    # 'admin_honeypot',
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
@@ -219,27 +222,20 @@ MESSAGE_TAGS = {
 
 # SMTP CONFIGURATION
 # email stuff
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
 
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_ACTIVE_FIELD = "is_active"
-EMAIL_SERVER = 'smtp.gmail.com'
-# EMAIL_HOST_PASSWORD = "lgbxkvhfxdrcseyu"
-# DEFAULT_FROM_EMAIL = "alexisdelivery@gmail.com"
-# EMAIL_HOST_USER = "tteachergradingsystem@gmail.com"
-#EMAIL_HOST_PASSWORD = "daoikamkxewdykrz"
-EMAIL_HOST_PASSWORD = "fzqbxhssjmomcxwv"
-DEFAULT_FROM_EMAIL = "ocemarkt@gmail.com"
-EMAIL_HOST_USER = "ocemarkt@gmail.com"
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_ACTIVE_FIELD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_SERVER = os.environ.get('EMAIL_SERVER')
 
-# ADMIN EMAIL
-ADMIN_EMAIL = "okolo.oce@gmail.com"
-# ADMIN_EMAIL = "alexanderemmanuel1719@gmail.com"
+EMAIL_HOST_PASSWORD =os.environ.get('EMAIL_HOST_PASSWORD')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+
+
+ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
 
 # DELIVERY FEE
 STANDARD_DELIVERY = 5
-# daoikamkxewdykrz
-# EMAIL_HOST_PASSWORD = "lgbxkvhfxdrcseyu"
-# DEFAULT_FROM_EMAIL = "alexisdelivery@gmail.com"

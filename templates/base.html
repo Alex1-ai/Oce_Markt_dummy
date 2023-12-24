@@ -6,10 +6,45 @@
   <head>
     {% load static %}
     <title>OCE-Markt</title>
+    
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="OCE market where you can shop online" />
+    <meta name="description" content="OCE market E-commerce store" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+     <!-- Meta Descriptions -->
+     <meta name="description" content="Explore a wide range of products at OCE Market. Your one-stop e-commerce store for online shopping.">
+
+     <!-- Canonical URL -->
+     <link rel="canonical" href="https://www.ocemarket.com/">
+ 
+     <!-- Open Graph Tags (for social media) -->
+     <meta property="og:title" content="OCE Market - Your Online Shopping Destination">
+     <meta property="og:description" content="Explore a wide range of products at OCE Market. Your one-stop e-commerce store for online shopping.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://www.ocemarket.com/">
+     <meta property="og:image" content="{% static 'images/oce-markt.PNG' %}">
+ 
+     <!-- Twitter Card Tags (for social media) -->
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="OCE Market - Your Online Shopping Destination">
+     <meta name="twitter:description" content="Explore a wide range of products at OCE Market. Your one-stop e-commerce store for online shopping.">
+     <meta name="twitter:image" content="{% static 'images/oce-markt.PNG' %}">
+ 
+     <!-- Robots Meta Tag -->
+     <meta name="robots" content="index, follow">
+ 
+     <!-- Author Meta Tag -->
+     <meta name="author" content="OCE Market">
+    
+    
+    <!-- Favicons -->
+    <link href="{% static 'images/oce-markt.PNG' %}" rel="icon" />
+    <link href="{% static 'images/oce-markt.PNG' %}" rel="apple-touch-icon"/>
+
+    
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
     
@@ -58,6 +93,14 @@
             // jquery code 
         })
 
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-Y');
     </script>
   </head>
 
