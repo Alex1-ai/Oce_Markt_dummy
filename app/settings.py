@@ -27,7 +27,7 @@ load_dotenv()
 # SECRET_KEY = "django-insecure-fogb=2$#h(zm#fv*a&rih!gx-e2)twfxm1w6%4txx40@!^*$nx"
 SECRET_KEY= os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ["oce-markt-env.eba-cx8z9cze.us-west-2.elasticbeanstalk.com"]
 
