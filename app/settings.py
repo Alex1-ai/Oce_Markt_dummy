@@ -24,12 +24,12 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "django-insecure-fogb=2$#h(zm#fv*a&rih!gx-e2)twfxm1w6%4txx40@!^*$nx"
+
 SECRET_KEY= os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ["ocemarkt-env.eba-yqpim5ta.us-west-2.elasticbeanstalk.com", "*"]
+ALLOWED_HOSTS = [ "*"]
 
 
 # Application definition
@@ -97,22 +97,22 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-if 'RDS_DB_NAME' in os.environ:
-    DATABASES = {
-        'default':{
-            'ENGINE':'django.db.backends.postgresql',
-            'NAME': os.environ['RDS_DB_NAME'],
-            'USER': os.environ['RDS_USERNAME'],
-            'PASSWORD': os.environ['RDS_PASSWORD'],
-            'HOST': os.environ['RDS_HOSTNAME'],
-            'PORT': os.environ['RDS_PORT']
-        }
-    }
+# if 'RDS_DB_NAME' in os.environ:
+#     DATABASES = {
+#         'default':{
+#             'ENGINE':'django.db.backends.postgresql',
+#             'NAME': os.environ['RDS_DB_NAME'],
+#             'USER': os.environ['RDS_USERNAME'],
+#             'PASSWORD': os.environ['RDS_PASSWORD'],
+#             'HOST': os.environ['RDS_HOSTNAME'],
+#             'PORT': os.environ['RDS_PORT']
+#         }
+#     }
 
 
 
-else:
-    DATABASES = {
+# else:
+DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
