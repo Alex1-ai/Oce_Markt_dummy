@@ -11,7 +11,7 @@ from django.core.mail import EmailMessage
 
 def home(request):
 
-    print(DEBUG)
+    # print(DEBUG)
     products = Product.objects.all().filter(
         is_available=True).order_by('-modified_date')
      
