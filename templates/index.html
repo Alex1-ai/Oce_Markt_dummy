@@ -14,7 +14,7 @@
 {% include 'alert.html' %}
   <div class="container fill_height">
     <div class="row align-items-center fill_height">
-      
+
       <div class="col">
         <div class="main_slider_content">
           <h6>Spring / Summer Collection 2017</h6>
@@ -93,14 +93,14 @@
             >
               all
             </li>
-            
+
             <li
                     class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center"
                     data-filter=".women"
                   >
                     Women's
             </li>
-          
+
             <li
               class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center"
               data-filter=".accessories"
@@ -121,7 +121,7 @@
       <div class="col">
         <div
           class="product-grid"
-          
+
         >
         <!-- data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }' -->
 
@@ -144,7 +144,7 @@
                   <span>€{{product.tagged}}</span>
                 </div>
                 <div class="product_info">
-                  
+
                   <h6 class="product_name">
                     <a href="{{product.get_url}}"
                       >{{product.product_name}}</a
@@ -157,12 +157,12 @@
                 <a href="#">add to cart</a>
               </div> -->
             </div>
-        
+
           {% endif %}
           <!-- This is a comment -->
-    {% endfor %} 
-  
-          
+    {% endfor %}
+
+
         </div>
       </div>
     </div>
@@ -247,7 +247,7 @@
                         <img width="250" height="280" src="{{ product.image.url }}" alt="Product Image" />
                       </a>
                       </div>
-                    
+
                       {% if product.tagged != "" %}
                           <!-- this is a comment -->
                                 {% if product.tagged == "NEW" or product.tagged == "New" or product.tagged == "new" %}
@@ -257,7 +257,7 @@
                                     >
                                       <span>{{ product.tagged }}</span>
                                     </div>
-                                
+
                                 {%else%}
                                     <div class="favorite favorite_left"></div>
                                     <div
@@ -280,7 +280,7 @@
                           {% if product.old_price > 0 %}
                             <span>€{{product.old_price}}</span>
                           {% endif %}
-                        
+
                         </div>
                       </div>
                     </div>
@@ -289,8 +289,8 @@
               {% endif %}
             {% endfor %}
 
-            
-          </div> 
+
+          </div>
 
           <!-- Slider Navigation -->
 
@@ -316,7 +316,7 @@
 
 <!-- Blogs -->
 
-<div class="blogs">
+<!-- <div class="blogs">
   <div class="container">
     <div class="row">
       <div class="col text-center">
@@ -379,7 +379,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
