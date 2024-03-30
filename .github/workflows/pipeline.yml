@@ -3,9 +3,9 @@ name: oce-markt
 on:
     push:
         branches:
-            - main
+            - master
     pull_request:
-        branches: [main]
+        branches: [master]
         types: [opened, synchronize]
 
 jobs:
@@ -42,7 +42,7 @@ jobs:
               python manage.py test
 
         - name: Deploy
-          if: ${{ github.event_name == 'push' && github.ref =='refs/heads/main' && !contains(toJson(github.event.commits.*.message),'#skip')   }}
+          if: ${{ github.event_name == 'push' && github.ref =='refs/heads/master' && !contains(toJson(github.event.commits.*.message),'#skip')   }}
           env:
             deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
           run: |
