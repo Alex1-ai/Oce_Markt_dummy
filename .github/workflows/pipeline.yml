@@ -15,6 +15,7 @@ jobs:
           CLOUD_NAME: ${{ secrets.CLOUD_NAME}}
           API_KEY: ${{ secrets.API_KEY }}
           API_SECRET: ${{ secrets.API_SECRET }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 
         name: Checkout Repository

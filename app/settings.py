@@ -122,9 +122,11 @@ AUTH_USER_MODEL = 'accounts.Account'
 #     }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600)
 }
-
+DATABASES['default']['OPTIONS'] = {
+    'connect_timeout': 10,  # Timeout in seconds
+}
 
 # DATABASES = {
 #     'default': {
