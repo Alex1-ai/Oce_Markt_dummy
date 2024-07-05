@@ -27,6 +27,7 @@ django-admin-honeypot = "*"
 psycopg2-binary = "*"
 boto3 = "*"
 django-storages = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
