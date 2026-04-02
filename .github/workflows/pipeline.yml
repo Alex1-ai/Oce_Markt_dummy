@@ -71,18 +71,20 @@ jobs:
 
     tag_release:
       if: ${{ github.event_name == 'push' && !contains(toJson(github.event.commits.*.message), '#skip') }}
-      needs: [build-and-share, ocemarkt_pipeline]
+      needs: [ocemarkt_pipeline]
       permissions:
         contents: write
-      runs-on: ubuntu-20.04
+      runs-on: ubuntu-latest   # ✅ FIXED
+
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
           with:
-            fetch-depth: '0'
+            fetch-depth: 1
+
         - name: Bump version and push tag
           uses: anothrNick/github-tag-action@1.64.0
           env:
-            GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             WITH_V: true
             DEFAULT_BUMP: patch
 
