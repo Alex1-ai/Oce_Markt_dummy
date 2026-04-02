@@ -8,3 +8,5 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ["category_name"]}
     list_display = ['category_name', 'slug',
                     'cart_image', 'created_at', 'updated_at']
+
+

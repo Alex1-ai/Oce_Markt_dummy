@@ -18,6 +18,12 @@ class ProductAdmin(admin.ModelAdmin):
                     'price', 'image', 'stock', 'category', 'is_available', 'created_date', 'modified_date']
     inlines = [ProductGalleryInline]
 
+    def has_view_permission(self, request, obj=None):
+        return request.user.has_perm('myapp.view_mymodel')  # Replace with the correct permission
+
+    def has_change_permission(self, request, obj=None):
+        return request.user.has_perm('myapp.change_mymodel')
+
 
 @admin.register(Variation)
 class VariationAdmin(admin.ModelAdmin):
